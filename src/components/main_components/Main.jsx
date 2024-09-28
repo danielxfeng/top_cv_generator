@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { v4 as uuidv4 } from "uuid";
 import styles from "./Main.module.css";
 import Form from "./Form/Form";
 import CV from "./CV/CV";
+import { Education, Experience } from "../../model/model";
 
 const Main = () => {
   const [info, setInfo] = useState({
@@ -12,26 +12,9 @@ const Main = () => {
     address: "",
   });
 
-  const [educations, setEducations] = useState([
-    {
-      key: uuidv4(),
-      school: "",
-      degree: "",
-      start: new Date(),
-      end: new Date(),
-    },
-  ]);
+  const [educations, setEducations] = useState([Education()]);
 
-  const [experiences, setExperiences] = useState([
-    {
-      key: uuidv4(),
-      company: "",
-      position: "",
-      start: new Date(),
-      end: new Date(),
-      responsibilities: "",
-    },
-  ]);
+  const [experiences, setExperiences] = useState([Experience()]);
 
   return (
     <main className={styles.main}>

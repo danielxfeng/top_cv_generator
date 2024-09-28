@@ -1,4 +1,5 @@
 import styles from "./Form.module.css";
+import { Education, Experience } from "../../../model/model";
 
 const Info = ({ info, setInfo }) => {
   const submitInfo = (e) => {
@@ -21,7 +22,9 @@ const Info = ({ info, setInfo }) => {
       >
         <div className={styles.form__head}>
           <h3 className="primary-color">Edit Your Personal Information</h3>
-          <button className="a a-no-change" type="submit">Save</button>
+          <button className="a a-no-change" type="submit">
+            Save
+          </button>
         </div>
         <div className={styles.form__item}>
           <label htmlFor="name">Name</label>
@@ -72,6 +75,23 @@ const Info = ({ info, setInfo }) => {
   );
 };
 
+const ListComponent = ({ list, setList, tag }) => {
+  const add = () => {
+    save();
+    setList([...list, tag === "education" ? Education() : Experience()]);
+  };
+
+  const save = () => {
+    return (<></>);
+  };
+
+  const load = () => {
+    return (<></>);
+  };
+
+  return list.length === 0 ? add() : load();
+}
+
 const Form = ({
   info,
   educations,
@@ -84,6 +104,8 @@ const Form = ({
     <div className={styles.form}>
       <h2 className="primary-color">Edit your CV here</h2>
       <Info info={info} setInfo={setInfo} />
+      <ListComponent list={educations} setList={setEducations} tag="education" />
+      <ListComponent list={experiences} setList={setExperiences} tag="experience" />
     </div>
   );
 };
