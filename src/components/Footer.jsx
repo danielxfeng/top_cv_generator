@@ -4,12 +4,12 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <p>
-        &copy; 2024{" "}
+        &copy; 2024{' '}
         <a
-          className="a-no-change a-underline"
-          href="https://github.com/danielxfeng/top_cv_generator"
-          target="_blank"
-          rel="noopener noreferrer"
+          className='a a-no-change a-underline'
+          href='https://github.com/danielxfeng/top_cv_generator'
+          target='_blank'
+          rel='noopener noreferrer'
         >
           Fancy CV Generator
         </a>
