@@ -1,0 +1,39 @@
+html {
+  font-family: "Montserrat", sans-serif;
+  background-color: #F7F2FA;
+  color: #1D1B20;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Poppins", sans-serif;
+}
+
+.a-no-change, .a-no-change:hover, .a-no-change:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+.a-underline {
+  text-decoration: underline;
+}
+
+.primary-color {
+  color: #6750A4;
+}
+
+.primary-shadow {
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
