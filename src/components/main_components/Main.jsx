@@ -17,8 +17,8 @@ const Main = () => {
       key: uuidv4(),
       school: "",
       degree: "",
-      start: "",
-      end: "",
+      start: new Date(),
+      end: new Date(),
     },
   ]);
 
@@ -27,9 +27,9 @@ const Main = () => {
       key: uuidv4(),
       company: "",
       position: "",
-      start: "",
       responsibilities: "",
-      end: "",
+      start: new Date(),
+      end:new Date(),
     },
   ]);
 
