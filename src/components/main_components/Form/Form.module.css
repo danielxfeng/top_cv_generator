@@ -7,6 +7,12 @@
   padding: 20px;
 }
 
+.block {
+  border-top: 1px solid #6750a4;
+  border-bottom: 1px solid #6750a4;
+  border-radius: 10px;
+}
+
 .form__head, .form__item {
   display: flex;
   gap: 20px;
