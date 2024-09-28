@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import styles from "./Main.module.css";
-import Form from "./Form";
+import Form from "./Form/Form";
 import CV from "./CV/CV";
 
 const Main = () => {

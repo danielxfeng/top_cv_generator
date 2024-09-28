@@ -13,7 +13,9 @@
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.info__item, .education__item, .experience__item {
+.info__item,
+.education__item,
+.experience__item {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
@@ -26,5 +28,5 @@
 }
 
 .value {
-  color: #1D1B20;
+  color: #1d1b20;
 }
