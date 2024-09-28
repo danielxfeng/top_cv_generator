@@ -1,12 +1,49 @@
-import styles from './Main.module.css';
-import Form from './Form';
-import CV from './CV';
+import { useState } from "react";
+import { v4 as uuidv4 } from 'uuid';
+import styles from "./Main.module.css";
+import Form from "./Form";
+import CV from "./CV";
 
 const Main = () => {
+  const [info, setInfo] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    address: "",
+  });
+
+  const [education, setEducation] = useState([
+    {
+      key: uuidv4(),
+      school: "",
+      degree: "",
+      start: "",
+      end: "",
+    },
+  ]);
+
+  const [experience, setExperience] = useState([
+    {
+      key: uuidv4(),
+      company: "",
+      position: "",
+      start: "",
+      responsibilities: "",
+      end: "",
+    },
+  ]);
+
   return (
     <main className={styles.main}>
-      <Form />
-      <CV />
+      <Form
+        info={info}
+        education={education}
+        experience={experience}
+        setInfo={setInfo}
+        setEducation={setEducation}
+        setExperience={setExperience}
+      />
+      <CV info={info} education={education} experience={experience} />
     </main>
   );
 };
