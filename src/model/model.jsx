@@ -21,4 +21,8 @@ const Experience = () => {
   };
 };
 
-export { Education, Experience };
+const textAttrs = ["school", "degree", "company", "position"];
+const dateAttrs = ["start", "end"];
+const textAreaAttrs = ["responsibilities"];
+
+export { Education, Experience, textAttrs, dateAttrs, textAreaAttrs };

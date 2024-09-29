@@ -13,20 +13,20 @@
   border-radius: 10px;
 }
 
-.form__head, .form__item {
+.form__head, .form__attr {
   display: flex;
   gap: 20px;
   align-items: center;
 }
 
-.form__item label {
+.form__attr label {
   min-width: 100px;
   flex: 0;
   color: #6750a4;
   font-style: italic;
 }
 
-.form__item input {
+.form__attr input {
   min-width: 200px;
   padding: 5px;
   border: 1px solid #6750a4;
