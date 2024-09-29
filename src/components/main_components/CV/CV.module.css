@@ -13,12 +13,16 @@
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.info__item,
-.education__item,
-.experience__item {
+.block {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
+  margin-bottom: 20px;
 }
 
 .label {

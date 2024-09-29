@@ -1,13 +1,13 @@
 import styles from "./CV.module.css";
 
-const ListComponent = ({ list, tag, tagItem }) => {
+const ListComponent = ({ list }) => {
   return (
-    <div className={tag}>
+    <>
       {list.map((item) => (
-        <div className={tagItem} key={item.key}>
+        <div className={styles.item} key={item.key}>
           {Object.keys(item).map((key) => {
             return key === "key" ? null : (
-              <p className={styles.item} key={`${item.key}-${key}`}>
+              <p className={styles.attr} key={`${item.key}-${key}`}>
                 <span className={styles.label}>{key}:</span>
                 <span className={styles.value}>
                   {item[key] instanceof Date
@@ -19,7 +19,7 @@ const ListComponent = ({ list, tag, tagItem }) => {
           })}
         </div>
       ))}
-    </div>
+    </>
   );
 };
 
@@ -28,35 +28,27 @@ const CV = ({ info, educations, experiences }) => {
     <div className={`${styles.cv} primary-color`}>
       <div className={styles.frame}>
         <h2>Preview your CV</h2>
-        <div className={styles.info}>
+        <div className={styles.block}>
           <h3>Personal Information</h3>
-          <div className={styles.info__item}>
+          <div className={styles.item}>
             {Object.keys(info).map((key) => (
-              <p className={styles.item} key={key}>
+              <p className={styles.attr} key={key}>
                 <span className={styles.label}>{key}:</span>
                 <span className={styles.value}>{info[key]}</span>
               </p>
             ))}
           </div>
         </div>
-        <div className={styles.educations}>
+        <div className={styles.block}>
           <h3>Educations</h3>
-          <div className={styles.education__items}>
-            <ListComponent
-              list={educations}
-              tag={styles.education}
-              tagItem={styles.education__item}
-            />
+          <div className={styles.items}>
+            <ListComponent list={educations} />
           </div>
         </div>
-        <div className={styles.experiences}>
+        <div className={styles.block}>
           <h3>Experiences</h3>
-          <div className={styles.experience__items}>
-            <ListComponent
-              list={experiences}
-              tag={styles.experience}
-              tagItem={styles.experience__item}
-            />
+          <div className={styles.items}>
+            <ListComponent list={experiences} />
           </div>
         </div>
       </div>
