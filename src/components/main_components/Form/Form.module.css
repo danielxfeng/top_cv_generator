@@ -1,0 +1,90 @@
+.form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  padding: 20px;
+}
+
+.block {
+  border-top: 1px solid #6750a4;
+  border-bottom: 1px solid #6750a4;
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 20px;
+}
+
+.form__btns {
+  display: flex;
+  justify-content: space-around;
+}
+
+.form__items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form__item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.form__item::after {
+  content: "";
+  text-align: center;
+  display: block;
+  width: 70%;
+  margin: 0 auto;
+  border-bottom: 2px groove #6750a4;
+}
+
+.form__head,
+.form__attr {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.form__attr label {
+  width: 120px;
+  min-width: 120px;
+  max-width: 120px;
+  flex: 0;
+  color: #6750a4;
+  font-style: italic;
+}
+
+.form__attr input, .form__attr textarea {
+  width: 60%;
+  min-width: 60%;
+  max-width: 60%;
+  flex: 0;
+  padding: 5px;
+  border: 1px solid #6750a4;
+  border-radius: 5px;
+}
+
+.form__head button, .form__btn__add__container button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #6750a4;
+  color: #f7f2fa;
+}
+
+.form__head button:hover, .form__btn__add__container button:hover {
+  color: #f7f2fa;
+}
+
+.form__btns button {
+  padding: 5px 10px;
+}
+
+.form__btn__add__container {
+  display: flex;
+  justify-content: center;
+}
