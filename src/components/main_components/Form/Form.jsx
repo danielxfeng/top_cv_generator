@@ -4,6 +4,19 @@ import { Education, Experience } from "../../../model/model";
 import Info from "./Info";
 import ListComponent from "./ListComponents";
 
+const AddBtn = (({ tag, addNew }) => {
+  return (
+    <div className={styles.form__btn__add__container}>
+    <button
+      className="a a-no-change"
+      onClick={(e) => addNew(e, tag)}
+    >
+      Add New
+    </button>
+    </div>
+  );
+});
+
 const Form = ({
   info,
   educations,
@@ -43,12 +56,7 @@ const Form = ({
           tag="education"
           styles={styles}
         />
-        <button
-          className="a a-no-change"
-          onClick={(e) => addNew(e, "education")}
-        >
-          Add New
-        </button>
+        <AddBtn tag="education" addNew={addNew}/>
       </div>
       <div className={styles.block}>
         <h3 className="primary-color">Edit Your Experiences</h3>
@@ -58,12 +66,7 @@ const Form = ({
           tag="experience"
           styles={styles}
         />
-        <button
-          className="a a-no-change"
-          onClick={(e) => addNew(e, "experience")}
-        >
-          Add New
-        </button>
+        <AddBtn tag="experience" addNew={addNew}/>
       </div>
     </div>
   );

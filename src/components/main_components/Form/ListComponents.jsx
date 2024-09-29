@@ -31,28 +31,16 @@ const ListComponent = ({ list, setList, tag, styles }) => {
   };
 
   return (
-    <div className={styles.items}>
+    <div className={styles.form__items}>
       {list.map((item) => (
         <form
-          className={styles.item}
+          className={styles.form__item}
           action="/"
           method="post"
           key={item.key}
           data-key={item.key}
           onSubmit={(e) => save(e)}
         >
-          <div className={styles.form__head}>
-            <button className="a a-no-change" type="submit">
-              Save
-            </button>
-            <button
-              className="a a-no-change"
-              data-key={item.key}
-              onClick={(e) => del(e)}
-            >
-              Delete
-            </button>
-          </div>
           <InputComponent
             obj={item}
             itemKey={item.key}
@@ -78,10 +66,23 @@ const ListComponent = ({ list, setList, tag, styles }) => {
                 placeholder="Responsibilities"
                 autoComplete="responsibilities"
                 defaultValue={item.responsibilities}
+                rows="5"
                 required
               />
             </div>
           )}
+          <div className={`${styles.form__head} ${styles.form__btns}`}>
+            <button className="a a-no-change" type="submit">
+              Save
+            </button>
+            <button
+              className="a a-no-change"
+              data-key={item.key}
+              onClick={(e) => del(e)}
+            >
+              Delete
+            </button>
+          </div>
         </form>
       ))}
     </div>
