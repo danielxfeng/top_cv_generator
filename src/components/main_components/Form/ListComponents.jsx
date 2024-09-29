@@ -78,6 +78,7 @@ const ListComponent = ({ list, setList, tag, styles }) => {
                 placeholder="Responsibilities"
                 autoComplete="responsibilities"
                 defaultValue={item.responsibilities}
+                required
               />
             </div>
           )}

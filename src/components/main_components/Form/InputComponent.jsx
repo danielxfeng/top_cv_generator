@@ -21,6 +21,7 @@ const InputComponent = ({ obj, itemKey, type, keys, styles }) => {
             defaultValue={
               keys === textAttrs ? value : value.toISOString().split("T")[0]
             }
+            required
           />
         </div>
       ))}

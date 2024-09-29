@@ -32,6 +32,7 @@ const Info = ({ info, setInfo, styles }) => {
             placeholder="Name"
             autoComplete="name"
             defaultValue={info.name}
+            required
           />
         </div>
         <div className={styles.form__attr}>
@@ -43,6 +44,7 @@ const Info = ({ info, setInfo, styles }) => {
             placeholder="Email"
             autoComplete="email"
             defaultValue={info.email}
+            required
           />
         </div>
         <div className={styles.form__attr}>
@@ -54,6 +56,7 @@ const Info = ({ info, setInfo, styles }) => {
             placeholder="Phone"
             autoComplete="tel"
             defaultValue={info.phone}
+            required
           />
         </div>
         <div className={styles.form__attr}>
@@ -65,6 +68,7 @@ const Info = ({ info, setInfo, styles }) => {
             placeholder="Address"
             autoComplete="address"
             defaultValue={info.address}
+            required
           />
         </div>
       </form>
